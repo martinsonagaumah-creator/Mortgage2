@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="mortgage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="grid-wrapper">
+            <section class="first">
+            <form action="" class="calculator" id="mortgageForm">
+                <div class="header">
+                   <h2>Mortgage Calculator</h2>
+                   <button type="reset" class="clear-btn">Clear All</button>
+                </div>
+
+            <div class="input1">
+                <label for="mortgage-account">Mortgage Amount</label>
+                <div class="input2">
+                <span>$</span>
+                <input type="number" id="mortgageAccount" name="mortgageAccount" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="mortgage-term">Mortgage Term</label>
+                <div class="input-group">
+                    <input type="number" id="mortgageTerm" name="mortgageTerm" required>
+                    <span>years</span>
+                </div>
+                
+
+                <label for="interest-rate">Interest Rate</label>
+                <div class="input-group">
+                    <input type="number" id="interestRate" step="0.01" name="interestRate" required>
+                    <span>%</span>
+                </div>
+            </div>
+
+            <div class="query-type">
+               <div>Mortgage Type</div> 
+
+                <label class="query-option">
+                    <input type="radio" value="repayment" name="query" required>
+                    Repayment
+                </label>
+
+                <label class="query-option">
+                    <input type="radio" value="interest-only" name="query">
+                    Interest Only
+                </label>
+            </div>
+            
+           <button type="submit" class="calculate"><img src="icon-calculator.svg" alt="">Calculate Repayments</button>
+            </form>
+            </section>
+
+            <section class="results">
+                <img src="illustration-empty.svg" alt="" id="photograph">
+                <h3 id="resultTitle">Results shown here</h3>
+                <p>
+                    Monthly Repayment:
+                    <span id="monthlyPayment">$0</span>
+                </p>
+                <p>
+                    Total Repayment:
+                    <span id="totalPayment">$0</span>
+                </p>
+                <p id="repayments">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+            </section>
+        </div>
+    </div>
+    <script src="mortgage.js"></script>
+</body>
+</html>
