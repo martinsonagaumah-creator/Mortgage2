@@ -24,35 +24,5 @@ form.addEventListener("submit", function(e) {
     photograph.style.display = "none";
     resultTitle.style.display = "none";
     repayments.style.display = "none";
-
-    let isValid = true;
-
-    const radios = document.querySelectorAll("input[type='radio']");
-
-    if(amount === ""){
-        isValid = false;
-    };
-
-    if(years === ""){
-        isValid = false;
-    };
-
-    if(annualRate === ""){
-        isValid = false;
-    };
-
-    let selected = false;
-    radios.forEach(radio => {
-        if(radio.checked) selected = true;
-    });
-
-    if(!selected){
-        isValid = false;
-    };
-
-    if(isValid){
-        alert("Your mortgage repayment has been calculated succesfully. See your estimated monthly and total repayment below.");
-        form.reset();
-    };
 });
 
